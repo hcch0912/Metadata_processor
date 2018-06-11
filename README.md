@@ -3,7 +3,7 @@
 In this repo, I describe the metadata structure and preprocessing methods
 
 ### Defination of the metadata structure
-
+```json
 meta_data_struct = {
 	"schedule_of_all_films": {
 		id: str,
@@ -51,7 +51,7 @@ meta_data_struct = {
 	"artist": [str],
 	"director":[str],
 }
-
+```
 ### Image to text
 
 I used Tesseract python interface -- tesserocr, where I set the segmentation argument to "single_block". This will let the reader read the text from left to right line by line. 
@@ -66,4 +66,21 @@ Since there is only one sample for me to create the text processing algorithm. I
 
 I tried to implement the metadata enrity following the idea of object-oriented-programming, where I created several classes to form the final big class. This can be easily modified and scaled in the future. 
 
-3. comp
+3. Compatibility
+
+Json format can be easily read by Pandas for other data processing tools with python and other programming languages, which provide high compatibility. 
+
+### Extract Information From Video 
+
+1. Visual Information 
+
+We can use object recognition tools, such as [YOLO](https://github.com/zhreshold/mxnet-yolo), to recognize the objects in the screenshots of the moive. The screenshots can be taken when we can detect significant differences between scenes.  Then we can analyze the objects, to add some most freqent and most unique object description in to the metadata. 
+
+
+
+2. Audio Information
+
+We can also use some audio, speech recognition tools, such as [SpeechRecognition](https://pypi.org/project/SpeechRecognition/) to extract some meaningful informations, such as the languages the actors speaking, the content of their conversations, etc. 
+
+
+
