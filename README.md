@@ -8,16 +8,16 @@ meta_data_struct = {
 	"schedule_of_all_films": {
 		"id": "str",
 		"run_no": "int"
-	}
-	"film_grant_details":{
+	},
+	"film_grant_details" :{
 		"WEG": "str",
 		"grantor":"str",
 		"ref_no":"str",
-	}
-	"request": {
+	},
+	"request" :{
 		"requested_by":"str",
 		"date":"str",
-	}
+	},
 	"page":"int",
 	"title":"str",
 	"distribution_right":{
